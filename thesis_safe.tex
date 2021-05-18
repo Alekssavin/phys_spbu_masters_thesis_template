@@ -1,0 +1,64 @@
+%thesis_safe.tex
+%Это основной tex-файл, собирающий документ воедино. Данный файл можно скомпилировать с помощью стандартного компилятора LaTex, без XeLaTeX. Шрифт "Times New Roman", однако, работать не булет.
+%Необходимые пакеты и команды:
+\documentclass[a4paper,14pt]{extarticle} %Размер кегля можно менять в пределах 12-14. Пакет extarticle Поддерживает 14pt.
+\usepackage[utf8]{inputenc} %кодировка.
+\usepackage[english,russian]{babel} %языковые пакеты.
+\usepackage[backend=biber,style=gost-numeric,sorting=none, language=auto,hyperref=auto, autolang=other]{biblatex} %для библиографии выбирается стиль ГОСТ. Backend biber -- программа, отображающая библиографию. Она должна быть выставлена в настройках редактора как основная. Ищите в настройках "BibTeX Engine".
+\addbibresource{bibliography.bib} %файл с библиографическими данными.
+\usepackage{graphicx} %пакет, позволяющий вставлять изображения в документ.о
+\graphicspath{{images/}}  %все изображения хранятся в папке images/
+\usepackage{float}  %пакет, позволяющий управлять расположение плавающих объектов, например изображений.
+\usepackage{geometry} %пакет, определяющий отступы по краям страниц.
+\geometry{top=2cm}  %отступ сверху 20мм.
+\geometry{bottom=2cm} %отступ снизу 20мм.
+\geometry{left=3cm} %отступ слева 30мм.
+\geometry{right=1cm}  %отступ справа 10мм.
+\usepackage{setspace}  %полуторный межстрочный интервал.
+\onehalfspacing
+\usepackage{amsthm,amssymb, amsmath} %AMS стиль для формул.
+\usepackage{booktabs} %расширенные возможности редактирования таблиц.
+\usepackage{multirow} %объединение нескольких строк в таблицах.
+\providecommand{\keywordsru}[1]{\textbf{\textit{Ключевые слова:}} #1}
+\providecommand{\keywordsen}[1]{\textbf{\textit{Keywords:}} #1}
+%Дополнительные пакеты и команды:
+\usepackage{siunitx}  %физические величины.
+\usepackage{enumitem} %улучшенные нумерованные списки.
+\usepackage{csquotes} %цитаты
+
+% Начало документа:
+\begin{document}
+  
+  \input{chapters/title.tex} %вставить титульный лист.
+
+  \newpage
+
+  \tableofcontents
+
+  \newpage
+
+  \input{chapters/anotation.tex}  %вставить аннотацию и ключевые слова.
+
+  \newpage
+
+  \input{chapters/introduction.tex} %вставить введение.
+
+  \newpage
+
+  \input{chapters/literature.tex} %вставить обзор литературы и предшествующих работ.
+
+  \newpage
+
+  \input{chapters/body.tex} %вставить основную часть. Её можно при желании разбит на несколько отдельных документов.
+
+  \newpage
+
+  \input{chapters/conclusion.tex} %вставить заключительную часть.
+
+  \newpage
+
+  \include{chapters/equipment}  %перечень использованного оборудования.
+
+  \printbibliography[heading=bibintoc] % библиография.
+
+\end{document}
