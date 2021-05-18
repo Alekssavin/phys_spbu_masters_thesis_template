@@ -11,7 +11,7 @@
 \usepackage[backend=biber,style=gost-numeric,sorting=none, language=auto,hyperref=auto, autolang=other]{biblatex} %для библиографии выбирается стиль ГОСТ. Backend biber -- программа, отображающая библиографию. Она должна быть выставлена в настройках редактора как основная. Ищите в настройках "BibTeX Engine".
 \addbibresource{bibliography.bib} %файл с библиографическими данными.
 \usepackage{graphicx} %пакет, позволяющий вставлять изображения в документ.о
-\graphicspath{{images/}}  %все изображения хранятся в папке images/
+\graphicspath{{./images/}}  %все изображения хранятся в папке images/
 \usepackage{float}  %пакет, позволяющий управлять расположение плавающих объектов, например изображений.
 \usepackage{geometry} %пакет, определяющий отступы по краям страниц.
 \geometry{top=2cm}  %отступ сверху 20мм.
@@ -33,7 +33,7 @@
 % Начало документа:
 \begin{document}
   
-  \input{chapters/title.tex} %вставить титульный лист.
+  \input{./chapters/title.tex} %вставить титульный лист.
 
   \newpage
 
@@ -41,27 +41,27 @@
 
   \newpage
 
-  \input{chapters/anotation.tex}  %вставить аннотацию и ключевые слова.
+  \input{./chapters/anotation.tex}  %вставить аннотацию и ключевые слова.
 
   \newpage
 
-  \input{chapters/introduction.tex} %вставить введение.
+  \input{./chapters/introduction.tex} %вставить введение.
 
   \newpage
 
-  \input{chapters/literature.tex} %вставить обзор литературы и предшествующих работ.
+  \input{./chapters/literature.tex} %вставить обзор литературы и предшествующих работ.
 
   \newpage
 
-  \input{chapters/body.tex} %вставить основную часть. Её можно при желании разбит на несколько отдельных документов.
+  \input{./chapters/body.tex} %вставить основную часть. Её можно при желании разбит на несколько отдельных документов.
 
   \newpage
 
-  \input{chapters/conclusion.tex} %вставить заключительную часть.
+  \input{./chapters/conclusion.tex} %вставить заключительную часть.
 
   \newpage
 
-  \include{chapters/equipment}  %перечень использованного оборудования.
+  \include{./chapters/equipment}  %перечень использованного оборудования.
 
   \printbibliography[heading=bibintoc] % библиография.
 
