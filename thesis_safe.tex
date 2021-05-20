@@ -25,11 +25,12 @@
 \usepackage{siunitx}  %физические величины.
 \usepackage{enumitem} %улучшенные нумерованные списки.
 \usepackage{csquotes} %цитаты
+\usepackage[bookmarks]{hyperref}  %интерактивная индексация в pdf.
 
 % Начало документа:
 \begin{document}
   
-  \input{chapters/title.tex} %вставить титульный лист.
+  \input{./chapters/title.tex} %вставить титульный лист.
 
   \newpage
 
@@ -37,27 +38,27 @@
 
   \newpage
 
-  \input{chapters/anotation.tex}  %вставить аннотацию и ключевые слова.
+  \input{./chapters/anotation.tex}  %вставить аннотацию и ключевые слова.
 
   \newpage
 
-  \input{chapters/introduction.tex} %вставить введение.
+  \input{./chapters/introduction.tex} %вставить введение.
 
   \newpage
 
-  \input{chapters/literature.tex} %вставить обзор литературы и предшествующих работ.
+  \input{./chapters/literature.tex} %вставить обзор литературы и предшествующих работ.
 
   \newpage
 
-  \input{chapters/body.tex} %вставить основную часть. Её можно при желании разбит на несколько отдельных документов.
+  \input{./chapters/body.tex} %вставить основную часть. Её можно при желании разбит на несколько отдельных документов.
 
   \newpage
 
-  \input{chapters/conclusion.tex} %вставить заключительную часть.
+  \input{./chapters/conclusion.tex} %вставить заключительную часть.
 
   \newpage
 
-  \include{chapters/equipment}  %перечень использованного оборудования.
+  \include{./chapters/equipment}  %перечень использованного оборудования.
 
   \printbibliography[heading=bibintoc] % библиография.
 

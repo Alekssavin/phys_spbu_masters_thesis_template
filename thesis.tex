@@ -3,7 +3,6 @@
 %Это основной tex-файл, собирающий документ воедино.
 %Необходимые пакеты и команды:
 \documentclass[a4paper,14pt]{extarticle} %Размер кегля можно менять в пределах 12-14. Пакет extarticle Поддерживает 14pt.
-% \usepackage[utf8]{inputenc} %кодировка.
 \usepackage[english,russian]{babel} %языковые пакеты.
 \usepackage{fontspec} %шрифты. 
 \defaultfontfeatures{Ligatures={TeX},Renderer=Basic}  %служебная команда для XuLaTeX 
@@ -29,6 +28,7 @@
 \usepackage{siunitx}  %физические величины.
 \usepackage{enumitem} %улучшенные нумерованные списки.
 \usepackage{csquotes} %цитаты
+\usepackage[bookmarks]{hyperref}  %интерактивная индексация в pdf.
 
 % Начало документа:
 \begin{document}
